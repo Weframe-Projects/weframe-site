@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import CustomCursor from "@/components/ui/CustomCursor";
 import "./globals.css";
 
@@ -9,8 +9,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
   display: "swap",
 });
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${playfair.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${jakarta.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <CustomCursor />
